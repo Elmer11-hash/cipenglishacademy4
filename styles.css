@@ -1434,7 +1434,7 @@ body:hover .large-promo-image {
   align-items: center; /* Center horizontally */
   flex-direction: column; /* Stack content vertically */
   height: 100vh; /* Full viewport height */
-  padding-top: 90vh; /* Use viewport units instead of pixels for dynamic adjustment */
+  padding-top: 99vh; /* Use viewport units instead of pixels for dynamic adjustment */
   transform: translateY(-5vh); /* Slight vertical shift to counteract zooming effects */
 }
 
