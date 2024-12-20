@@ -1501,7 +1501,7 @@ body:hover .large-promo-image {
 /* Mobile View (max-width: 768px) */
 @media (max-width: 768px) {
   .small-promos-wrapper {
-    padding-top: 800px; /* Adjust padding for mobile */
+    padding-top: 850px; /* Adjust padding for mobile */
     transform: none; /* Reset the vertical transform for mobile */
   }
 
