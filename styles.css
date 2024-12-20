@@ -223,18 +223,6 @@ nav {
 .menu > li {
   position: relative;
 }
-
-/* Main Links */
-.menu {
-  display: flex !important; /* Use flexbox to keep links in a row */
-  flex-wrap: nowrap !important; /* Prevent wrapping to new lines */
-  gap: 0 !important; /* No gap between the links */
-  justify-content: flex-end !important; /* Align the menu links to the right */
-  align-items: center !important; /* Center the links vertically */
-  width: 100% !important; /* Ensure the menu takes up the full width */
-  transition: transform 0.3s ease !important; /* Smooth transition for zoom */
-}
-
 .menu a {
   color: #000000 !important;
   text-decoration: none !important;
@@ -247,6 +235,7 @@ nav {
   white-space: nowrap !important; /* Prevent text wrapping */
   flex-shrink: 0 !important; /* Prevent shrinking */
 }
+
 
 
 .menu a:hover,
@@ -404,18 +393,19 @@ footer {
   margin-left: 95px !important;
 }
 
-
-/* Mobile View Adjustments */
-@media (max-width: 768px) {
+/* Mobile View - Adjust styles for screens less than or equal to 600px */
+@media (max-width: 600px) {
   .notice {
-    font-size: 20px !important; /* Adjust font size for mobile */
-    padding-right: 10px !important; /* Reduce padding for mobile */
-    margin-bottom: 0px !important; /* Adjust margin for mobile */
-    margin-top: -5px !important; /* Adjust top margin for mobile */
-    text-align: center !important; /* Keep text centered */
-    letter-spacing: 0.5px !important; /* Adjust letter spacing for mobile */
+    font-size: 18px;  /* Smaller font size for mobile */
+    margin-left: 0px !important; /* Reduce left margin */
+    margin-right: 0px;  /* Add right margin for balanced spacing */
+    padding: 10px;  /* Reduce padding for smaller screens */
+    text-align: center;  /* Center the text on mobile */
+    margin-top: -5px !important;
+    margin-bottom: -5px;
   }
 }
+
 
 .notice-section {
   background-color: rgba(250, 238, 225, 0.47);
@@ -1094,12 +1084,13 @@ h2 {
 /* Mobile view adjustments for .promo */
 @media (max-width: 600px) {
   .promo {
-    font-size: 20px !important; /* Adjust font size for mobile */
-    padding-right: 10px !important; /* Reduce padding for mobile */
-    margin-bottom: 0px !important; /* Adjust margin for mobile */
-    margin-top: -80px !important; /* Adjust top margin for mobile */
-    text-align: center !important; /* Keep text centered */
-    letter-spacing: 0.5px !important; /* Adjust letter spacing for mobile */
+    font-size: 18px;  /* Smaller font size for mobile */
+    margin-left: 0px !important; /* Reduce left margin */
+    margin-right: 0px;  /* Add right margin for balanced spacing */
+    padding: 10px;  /* Reduce padding for smaller screens */
+    text-align: center;  /* Center the text on mobile */
+    margin-top: -85px !important;
+    margin-bottom: -5px;
   }
 }
 
@@ -1230,7 +1221,6 @@ button:hover {
   flex-direction: row;
   margin: 0 auto;
   padding: 20px;
-  margin-bottom: 20px;
   margin-top: -50px;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
@@ -2375,10 +2365,9 @@ html, body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-/* Responsive Design */
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hide menu by default */
   .menu {
     display: none;
     flex-direction: column;
@@ -2392,6 +2381,7 @@ html, body {
     z-index: 999;
   }
 
+  /* Show menu when active */
   .menu.active {
     display: flex;
   }
@@ -2408,25 +2398,26 @@ html, body {
     font-size: 14px;
   }
 
+  /* Display hamburger menu */
   .hamburger {
     display: flex;
   }
 
+  /* Dropdown styling for mobile */
   .dropdown-menu {
-    position: absolute; /* Ensures it appears relative to the parent */
+    position: absolute; 
     top: 0;
-    left: 60%; /* Moves it slightly to the right of the main menu */
-    transform: translateX(-10%); /* Fine-tune positioning */
+    left: 60%; /* Adjust positioning */
+    transform: translateX(-10%);
     background-color: #c8c8c8;
     border-radius: 8px;
     z-index: 1001;
     padding: 10px;
-    width: auto; /* Optional: Adjust width as needed */
-    display: none; /* Initially hide the dropdown */
+    display: none; /* Initially hidden */
   }
 
   .menu > li:hover .dropdown-menu {
-    display: flex; /* Show dropdown on hover */
+    display: flex;
     flex-direction: column;
   }
 
