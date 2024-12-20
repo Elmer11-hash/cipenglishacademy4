@@ -388,15 +388,6 @@ footer {
 
 
 
-
-/* Parent container */
-.container {
-  display: flex;
-  justify-content: flex-start; /* Align to the left */
-  align-items: center; /* Optional: centers vertically if needed */
-  height: 100vh; /* Optional: Full viewport height */
-}
-
 /* .notice element */
 .notice {
   font-size: 35px;
